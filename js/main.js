@@ -4,15 +4,18 @@ let thanksCard = document.querySelector(".thanks-card");
 let submitCard = document.querySelector(".submit-card");
 let userMark = document.getElementById("mark");
 let fullMark = document.getElementById("fullMark");
-let count = 0;
 
 ratingsItems.forEach(item => {
-	count++;
 	item.addEventListener("click", function(e) {
-		ratingsItems.forEach(el => {
+		ratingsItems.forEach( (el) => {
 			el.classList.remove("active");
 		});
-		e.target.classList.add("active");
+		for(let i = 0; i < ratingsItems.length; i++) {
+			if(i === +e.target.textContent) {
+				break;
+			}
+			ratingsItems[i].classList.add("active");
+		}
 	});
 });
 
@@ -23,6 +26,6 @@ submitBtn.addEventListener("click", function(e) {
 			submitCard.style.display = "none";
 			userMark.textContent = item.textContent;
 		}
-		fullMark.textContent = count;
+		fullMark.textContent = ratingsItems.length;
 	})
 });

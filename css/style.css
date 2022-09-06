@@ -1,0 +1,152 @@
+/* Start Global Rule */
+:root {
+	--orange-color: hsl(25, 97%, 53%);
+	--white-color: hsl(0, 0%, 100%);
+	--light-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(216, 12%, 54%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--very-dark-blue: hsl(216, 12%, 8%);
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Overpass', sans-serif;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+/* Medium */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+/* large */
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+/* Start Page */
+.page {
+	background-color: var(--very-dark-blue);
+}
+.page .container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.page .container .app {
+	width: 400px;
+	border-radius: 12px;
+	padding: 30px;
+	background-color: var(--dark-blue);
+}
+/* .page .container .app .imgThanks {
+	width: fit-content;
+	margin: auto;
+} */
+.page .container .app .thanks-card {
+	text-align: center;
+	display: none;
+}
+.page .container .app .thanks-card .result {
+	padding: 10px 20px;
+	border-radius: 20px;
+	background-color: hsl(217deg 12% 63% / 35%);
+	color: var(--orange-color);
+	width: fit-content;
+	margin: 12px auto;
+}
+.page .container .app .circle {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+	background-color: hsl(217deg 12% 63% / 35%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	transition: .3s;
+}
+.page .container .app .ratings .circle {
+	color: var(--medium-grey);
+}
+.page .container .app .circle:hover {
+	background-color: var(--medium-grey);
+	color: white;
+}
+.page .container .app .circle.active {
+	background-color: orange;
+	color: white;
+}
+.page .container .app .title {
+	color: var(--white-color);
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+.page .container .app .desc {
+	font-size: 15px;
+	line-height: 1.6;
+	color: var(--medium-grey);
+	margin-bottom: 25px;
+}
+.page .container .app .ratings {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.page .container .app button {
+	display: block;
+	letter-spacing: 2px;
+	width: 100%;
+	border: none;
+	background-color: var(--orange-color);
+	font-weight: normal;
+	text-align: center;
+	padding: 12px;
+	border-radius: 30px;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	transition: .3s;
+}
+.page .container .app button:hover {
+	background-color: var(--white-color);
+	font-weight: bold;
+	color: var(--orange-color);
+}
+@media (max-width: 500px) {
+	.page .container .app .circle {
+		width: 40px;
+		height: 40px;
+	}
+}
+/* End Page */
